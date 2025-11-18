@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice to Design - Mini Figma</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="toolbar">
+    <button onclick="setTool('select')">🖱 Select</button>
+    <button onclick="setTool('rectangle')">⬛ Rectangle</button>
+    <button onclick="setTool('circle')">⚪ Circle</button>
+    <button onclick="setTool('line')">📏 Line</button>
+    <button onclick="clearCanvas()">🧹 Clear</button>
+    <button onclick="undo()">↩ Undo</button>
+    <button onclick="redo()">↪ Redo</button>
+    <button onclick="saveDesign()">💾 Save JSON</button>
+    <button onclick="loadDesign()">📂 Load JSON</button>
+    <button onclick="saveImage()">🖼 Save PNG</button>
+    <button onclick="startListening()">🎙 Start Listening</button>
+
+    <input type="file" id="file-input" style="display:none;" onchange="handleFile(event)">
+
+  </div>
+
+  <div id="canvas-container">
+    <canvas id="design-canvas" width="4000" height="4000"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Rulers -->
+  <canvas id="top-ruler"></canvas>
+  <canvas id="left-ruler"></canvas>
+
+  <!-- Voice Debug UI -->
+  <div id="debug-ui">
+  <div id="chatbox">
+      <strong>Mic Input:</strong>
+      <div id="mic-output">—</div>
+      <input id="manual-command" placeholder="Type command and press Enter">
+  </div>
+  <div id="interpreter">
+      <strong>Interpreter:</strong>
+      <div id="interpreter-output">—</div>
+  </div>
+  </div>
+
+
+</body>
+</html>

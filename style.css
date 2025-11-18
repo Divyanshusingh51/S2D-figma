@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  #toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #222;
+    color: white;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #666;
+  }
+  
+  #canvas-container {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    background-color: #f0f0f0;
+  }
+  
+  canvas {
+    background: white;
+    border: 1px solid #ccc;
+  }
+  
+  #top-ruler, #left-ruler {
+    position: fixed;
+    background: #fff;
+    z-index: 5;
+  }
+  #top-ruler {
+    left: 40px;
+    top: 0;
+    height: 40px;
+    width: 100vw;
+  }
+  #left-ruler {
+    top: 40px;
+    left: 0;
+    width: 40px;
+    height: 100vh;
+  }
+  
+  #debug-ui {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255,255,255,0.9);
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    z-index: 100;
+    width: 300px;
+  }
+  #chatbox input {
+    width: 100%;
+    margin-top: 5px;
+  }
+    
